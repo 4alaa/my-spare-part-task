@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Serv</title>
+   <!-- link of bookmarker favico -->
+   <link rel="shortcut icon" href="imgs/logoIcon.png" type="image/x-icon">
+
+    <!-- link of fontawesome  -->
+    <link rel="stylesheet" href="Style/all.min.css">
+    <!-- link of bootstrap -->
+    <link rel="stylesheet" href="Style/bootstrap.min.css">
+    <!-- link of css -->
+    <link rel="stylesheet" href="Style/index.css">
+
+
+
+
+
+
+    
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+
+</head>
+<body>
+<!-- level 1 -->
+<div class="levelForm_1">
+  
+    
+<div class="container">
+    <div class="row">
+
+
+        <h2 class="text-center text-white my-5">( Determine The Type Of Car )</h2>
+
+
+<!-- input 1 -->
+<div class="d-flex gap-2">
+    <p>Choose Model type You Want : </p>
+    <form autocomplete="off" >
+
+    <select  id="ModelType" required>
+      <option value="Individually" class="ModelType" selected>Individually</option>
+      <option value="Company"  class="ModelType">A company</option>
+      <option value="salesassistant"  class="ModelType">salesassistant</option>
+
+    </select>
+
+    </form>
+</div>
+
+<!-- input 2 -->
+
+<div class="d-flex gap-2">
+<p>Choose Car maker  : </p>
+<form autocomplete="off" >
+
+<select  id="carMakers" required>
+<option value="NISSAN" class="carMakers" selected>NISSAN</option>
+<option value="RENO" class="carMakers">RENO</option>
+<option value="HYUNDAI" class="carMakers">HYUNDAI</option>
+<option value="SKODA" class="carMakers">SKODA</option>
+</select>
+</form>
+</div>
+
+
+<!-- input 3 -->
+
+<div class="d-flex gap-2">
+<p>Choose Car modal  : </p>
+<form autocomplete="off" >
+
+<select  id="carModels" required>
+<option value="JUKE" class="carModels" selected onclick="getval(this)">JUKE</option>
+<option value="PATROL" class="carModels" onclick="getval(this)">PATROL</option>
+<option value="PICK UP" class="carModels" onclick="getval(this)">PICK UP</option>
+<option value="SENTRA" class="carModels" onclick="getval(this)">SENTRA</option>
+</select>
+</form>
+</div>
+
+
+<!-- input 4 -->
+
+<div class="d-flex gap-2">
+<p>Choose the year the car was made  : </p>
+<select  id="madeYear" required>
+
+</select>
+</div>
+
+
+<!-- submit level 1  -->
+<!-- <button  class="submitLevel1 btn btn-outline-warning my-3">submit level 1</button> -->
+
+<div class="d-flex justify-content-end my-5">
+    <button class="cta submitLevel1">
+        <span class="span">Next Step (2)</span>
+        <span class="second">
+          <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+            </g>
+          </svg>
+        </span> 
+    </button>
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+</div>
+
+<!-- level 2 -->
+<div class="levelForm_2 d-none">
+    <div class="container">
+            <!-- choosen Car -->
+<div class="container">
+    <div class="row justify-content-center">
+        
+            <div class="chosenCar">
+
+
+
+
+
+            </div>
+
+        
+    </div>
+</div>
+        <div class="row">
+        
+
+            <h2 class="text-center text-white my-4">( About The Car Spare Part )</h2>
+
+            
+            <!-- 1 -->
+                <label for="spare part" class="mb-2" >  Name of the car spare part :</label>
+                <input type="text" class="form-control my-2"  id="sparePartInput" required oninput="validateSparePartName()">
+                <p class="alert alert-danger rounded-2 d-none sparePartAlert">You Should Start With Capital Character</p>
+
+            <!-- 2 -->
+                <label for="numberOfPieces" class="mb-2" >Enter the number of pieces :</label>
+                <input type="text" class="form-control"  id="numberOfPiecesInput" required oninput="checkNumOfPieces()">
+                <p class="alert alert-danger rounded-2 d-none numberOfPiecesAlertIndividually">You Should Enter Number between 1 and 100 because  You Are Individually </p>
+                <p class="alert alert-danger rounded-2 d-none numberOfPiecesAlertcompany">You Should Enter Number between 10 and 80 because  You Are Company </p>
+                <p class="alert alert-danger rounded-2 d-none numberOfPiecesAlertsalesassistant">You Should Enter Number between 1 and 100 because  You Are salesassistant </p>
+
+
+            <!-- 3 -->
+                <!-- serial number input  apear if you are a salesassistant -->
+                <div class="serialNumberContainer  p-0 d-none">
+                    <label for="serialNum" class="mb-2">Enter Spare parts serial number :</label>
+                    <input type="text" class="form-control"  id="serialNumInput" required oninput="validateSerialNumber()">
+                    <p class="alert alert-danger rounded-2 d-none serialNumAlert">Serial Number Consits Of 10 Items,As You Ara A salesassistant </p>
+
+                </div>
+
+
+            <!-- 4 -->
+                <div class="chassisNumInputContainer p-0 ">
+                    <label for="chassisNum" class="mb-2" >Enter Vehicle chassis number :</label>
+                    <input type="text" class="form-control"  id="chassisNumInput" required oninput="validatechassisNumber()">
+                    <p class="alert alert-danger rounded-2 d-none chassisNumAlert">Chassis Number Consits Of 17 Items , As You Are Individually </p>
+                </div>
+                
+
+            <!-- 5 -->
+                <label for="description" class="mb-2" >Enter Spare part description : (optional)</label>
+                <textarea  id="description" cols="30" rows="5" ></textarea>
+            
+            <!-- 6 -->
+                <label for="description" class="mb-2" >Upload image of  the car spare part : (optional Field)</label>
+
+
+                <!-- multiple -->
+                <input type='file' id="readUrl" multiple>
+                <!-- <small class="text-danger">Image Must Apear Here To Show It In The Final App If You Want</small> -->
+
+<img id="uploadedImage" class="w-50 h-50 object-fit-cover mx-auto" src="#" alt="Uploaded Image" accept="image/png, image/jpeg" style="display:none;">
+              
+
+<!-- add new spare part -->
+
+<div class="d-flex justify-content-center align-items-center">
+
+    <!-- <button class="btn btn-outline-success mx-auto my-3 "></button> -->
+
+
+
+    <button class="button22 AddNewPats mb-2">
+        Add new Part
+        <div class="star-1">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-2">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-3">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-4">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-5">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="star-6">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 784.11 815.53"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs></defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+              <path
+                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                class="fil0"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </button>
+      
+
+</div>
+
+
+
+
+
+
+
+
+
+<p class="alert alert-danger rounded-2 d-none AlerAddNew">You should Enter Valid Data About Spare Part </p>
+
+<p class="fs-5 my-4 hint"><i class="fa-solid fa-face-smile-wink me-2"></i> HINTS FOR YOU</p>
+
+<strong class="text-danger text-capitalize fs-5">(1) if you want another spare part click (  <span class="text-warning"> Add new Part button</span>  ) If  you wnat to submit the orderd spare part click <span class="text-warning"> Next Step (3) button</span>  </strong>
+
+<strong class="text-danger text-capitalize fs-5 my-3">(2) Make sure of  what you ordered , if you return to update order you will ordered annother spare part</strong>
+
+
+<div class="d-flex justify-content-between align-items-center my-5 flex-wrap gap-4 ContOfFooterButtons justify-content-center">
+    <button class="btns backToLevelOne">
+        Previous Step (1)
+    </button>
+
+     <div class="d-flex rightBtn ">
+        <button class="cta submitLevel2">
+            <span class="span">Next Step (3)</span>
+            <span class="second">
+              <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                  <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                  <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                </g>
+              </svg>
+            </span> 
+        </button>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+<p class="alert alert-danger rounded-2 d-none level2Alert">You Must Enter Correct Information</p>
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- level 3 -->
+<div class="levelForm_3 d-none ">
+
+    <div class="container">
+
+        <div class="row">
+
+            <h2 class="text-center text-white my-5">( Enter Your Personal Data )</h2>
+            
+
+            <h4 class="text-warning">You ordered ( <span class="NumOfItemsOrderd"></span> ) items</h4>
+    <!-- 1 -->
+    <label for="customerNameInput" class="mb-2" > My name :</label>
+    <input type="text" class="form-control my-2"  id="customerNameInput" required  oninput="validateName()">
+    <p class="alert alert-danger rounded-2 d-none customerNameAlert ">Name Should Start With Capital Character and from 1 to 15 charcters</p>
+
+        <!-- 5 -->
+        <label for="CustomerPhoneInput" class="mb-2" >  My phone :</label>
+   
+
+
+        <div class="select-box">
+            <div class="selected-option bg-success">
+                <div>
+                    <span class="iconify text-white" data-icon="flag:gb-4x3"></span>
+                    <strong>+44</strong>
+                </div>
+                <input type="tel" name="tel" placeholder="Phone Number"  class="bg-white my-2"  id="CustomerPhoneInput"  required oninput="validatePhone()"> 
+            </div>
+            <div class="options">
+                <input type="text" class="search-box" placeholder="Search Country Name">
+                <ol>
+    
+                </ol>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+        <p class="alert alert-danger rounded-2 d-none CustomerPhoneAlert">You Should Enter Valid Phone Of Your Country Consists Of 11 Number </p>
+
+    <!-- 2 -->
+    <label for="customerEmailInput" class="mb-2" >  My Email :</label>
+    <input type="email" class="form-control my-2"  id="customerEmailInput" required oninput="validateEmail()">
+    <p class="alert alert-danger rounded-2 d-none customerEmailAlert">You Should Enter Valid Email (Gmails only) like anyInput@gmail.com</p>
+
+    
+    <!-- 3 -->
+    <label for="customerPasswordInput" class="mb-2" >  My Password :</label>
+    <input type="password" class="form-control my-2"  id="customerPasswordInput" required oninput="validatePass1()">
+    <p class="alert alert-danger rounded-2 d-none customerPasswordAlert">password must be at least any 3 inputs</p>
+    <span class="d-flex align-items-center gap-2 shows1 w-auto">
+        <i id="icon" class="far fa-eye"></i>
+        <p class="mt-3 pointer showpass">show Password</p>
+      </span>
+
+    <!-- 4 -->
+    <label for="RepasswordInput" class="mb-2" > Verify My Password :</label>
+    <input type="password" class="form-control my-2"  id="RepasswordInput" required oninput="validatePass2()">
+    <p class="alert alert-danger rounded-2 d-none RepasswordAlert">Password And  Repassword Not Matched </p>
+    <span class="d-flex align-items-center gap-2 shows2 w-auto">
+        <i id="icon2" class="far fa-eye"></i>
+        <p class="mt-3 pointer showpass">show Repassword</p>
+      </span>
+
+
+
+
+    
+
+
+
+
+    <div class="d-flex justify-content-between align-items-center my-5 flex-wrap gap-4 ContOfFooterButtons justify-content-center">
+        <button class="btns backLevel2">
+            Previous Step (2)
+                 </button>
+    
+         <div class="d-flex rightBtn ">
+            <button class="cta submitLevel3">
+                <span class="span">Next Step (4)</span>
+                <span class="second">
+                  <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                      <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                      <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                    </g>
+                  </svg>
+                </span> 
+            </button>
+        </div>
+        
+    </div>
+
+
+
+    <p class="alert alert-danger rounded-2 d-none level3Alert">You Must Enter Correct Information</p>
+
+
+            
+        </div>
+
+
+    </div>
+
+</div>
+
+<!-- level 4 -->
+<div class="levelForm_4 d-none ">
+
+    <div class="container">
+        <div class="row">
+
+            <h2 class="text-center text-white my-5">( Enter Details About Your Address )</h2>
+
+    <!-- input 1 -->
+    <div class="d-flex gap-2 input-field">
+        <p class="ShippingParagraph">Choose Shipping type You Want : </p>
+
+        <form autocomplete="off" >
+        <select  id="ShippingType" required>
+        <option value="myself" class="ShippingType" selected>For myself</option>
+        <option value="friend"  class="ShippingType">For a friend</option>
+        </select>
+        </form>
+
+    </div>
+
+    <!-- 2 -->
+    <label for="fullNameInArabicInput" class="mb-2" >  My Full Name In Arabic :</label>
+    <input type="text" class="form-control my-2"  id="fullNameInArabicInput" required placeholder="Enter your Name in arabic" oninput="validateNameInArabic()">
+    <p class="alert alert-danger rounded-2 d-none nameArbicAlert" >You Should Enter Your Name In Arabic</p>
+
+    <!-- 3 -->
+    <label for="fullNameInEnglishInput" class="mb-2" >  My Full Name In English :</label>
+    <input type="text" class="form-control my-2"  id="fullNameInEnglishInput" required  oninput="validateNameInEnglish()">
+    <p class="alert alert-danger rounded-2 d-none nameEnglishAlert">You Should Enter Your Name In English</p>
+
+
+    <!-- 9 -->
+    <label for="CustomerPhoneInput4" class="mb-2" >  My phone :</label>
+
+
+    <div class="select-box2">
+        <div class="selected-option2 bg-success">
+            <div>
+                <span class="iconify text-white" data-icon="flag:gb-4x3"></span>
+                <strong>+44</strong>
+            </div>
+            <input type="tel" name="tel" placeholder="Phone Number"  class="bg-white my-2"  id="CustomerPhoneInput4"  required oninput="validatePhone4()"> 
+        </div>
+        <div class="options2">
+            <input type="text" class="search-box2" placeholder="Search Country Name">
+            <ol>
+      
+            </ol>
+        </div>
+      </div>
+      
+    
+    <p class="alert alert-danger rounded-2 d-none CustomerPhoneAlert4">You Should Enter Valid Phone Of Your Country Consists Of 11 Number</p>
+
+
+    <!-- 4 -->
+    <div class='input-field'>
+        <label for='country'>My Country : </label>
+        <form autocomplete="off" >
+        <select id='country_select' name='country' class="country_select">
+        <option value="AF" selected>Afghanistan</option>
+        <option value="AX">Åland Islands</option>
+        <option value="AL">Albania</option>
+        <option value="DZ">Algeria</option>
+        <option value="AS">American Samoa</option>
+        <option value="AD">Andorra</option>
+        <option value="AO">Angola</option>
+        <option value="AI">Anguilla</option>
+        <option value="AQ">Antarctica</option>
+        <option value="AG">Antigua and Barbuda</option>
+        <option value="AR">Argentina</option>
+        <option value="AM">Armenia</option>
+        <option value="AW">Aruba</option>
+        <option value="AU">Australia</option>
+        <option value="AT">Austria</option>
+        <option value="TF">French Southern Territories</option>
+        <option value="GA">Gabon</option>
+        <option value="GM">Gambia</option>
+        <option value="GE">Georgia</option>
+        <option value="DE">Germany</option>
+        <option value="GH">Ghana</option>
+        <option value="GI">Gibraltar</option>
+        <option value="GR">Greece</option>
+        <option value="GL">Greenland</option>
+        <option value="GD">Grenada</option>
+        <option value="GP">Guadeloupe</option>
+        <option value="GU">Guam</option>
+        <option value="GT">Guatemala</option>
+        <option value="GG">Guernsey</option>
+        <option value="GN">Guinea</option>
+        <option value="GW">Guinea-Bissau</option>
+        <option value="GY">Guyana</option>
+        <option value="HT">Haiti</option>
+        <option value="HM">Heard Island and McDonald Islands</option>
+        <option value="VA">Holy See (Vatican City State)</option>
+        <option value="HN">Honduras</option>
+        <option value="HK">Hong Kong</option>
+        <option value="HU">Hungary</option>
+        <option value="IS">Iceland</option>
+        <option value="IN">India</option>
+        <option value="ID">Indonesia</option>
+        <option value="IR">Iran, Islamic Republic of</option>
+        <option value="IQ">Iraq</option>
+        <option value="IE">Ireland</option>
+        <option value="IM">Isle of Man</option>
+        <option value="IL">Israel</option>
+        <option value="IT">Italy</option>
+        <option value="JM">Jamaica</option>
+        <option value="JP">Japan</option>
+        <option value="JE">Jersey</option>
+        <option value="JO">Jordan</option>
+        <option value="KZ">Kazakhstan</option>
+        <option value="KE">Kenya</option>
+        <option value="KI">Kiribati</option>
+        <option value="KP">Korea, Democratic People's Republic of</option>
+        <option value="KR">Korea, Republic of</option>
+        <option value="KW">Kuwait</option>
+        <option value="KG">Kyrgyzstan</option>
+        <option value="LA">Lao People's Democratic Republic</option>
+        <option value="LV">Latvia</option>
+        <option value="LB">Lebanon</option>
+        <option value="LS">Lesotho</option>
+        <option value="LR">Liberia</option>
+        <option value="LY">Libya</option>
+        <option value="LI">Liechtenstein</option>
+        <option value="LT">Lithuania</option>
+        <option value="LU">Luxembourg</option>
+        <option value="MO">Macao</option>
+        <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+        <option value="MG">Madagascar</option>
+        <option value="MW">Malawi</option>
+        <option value="MY">Malaysia</option>
+        <option value="MV">Maldives</option>
+        <option value="ML">Mali</option>
+        <option value="MT">Malta</option>
+        <option value="MH">Marshall Islands</option>
+        <option value="MQ">Martinique</option>
+        <option value="MR">Mauritania</option>
+        <option value="MU">Mauritius</option>
+        <option value="YT">Mayotte</option>
+        <option value="MX">Mexico</option>
+        <option value="FM">Micronesia, Federated States of</option>
+        <option value="MD">Moldova, Republic of</option>
+        <option value="MC">Monaco</option>
+        <option value="MN">Mongolia</option>
+        <option value="ME">Montenegro</option>
+        <option value="MS">Montserrat</option>
+        <option value="MA">Morocco</option>
+        <option value="MZ">Mozambique</option>
+        <option value="MM">Myanmar</option>
+        <option value="NA">Namibia</option>
+        <option value="NR">Nauru</option>
+        <option value="NP">Nepal</option>
+        <option value="NL">Netherlands</option>
+        <option value="NC">New Caledonia</option>
+        <option value="NZ">New Zealand</option>
+        <option value="NI">Nicaragua</option>
+        <option value="NE">Niger</option>
+        <option value="NG">Nigeria</option>
+        <option value="NU">Niue</option>
+        <option value="NF">Norfolk Island</option>
+        <option value="MP">Northern Mariana Islands</option>
+        <option value="NO">Norway</option>
+        <option value="OM">Oman</option>
+        <option value="PK">Pakistan</option>
+        <option value="PW">Palau</option>
+        <option value="PS">Palestinian Territory, Occupied</option>
+        <option value="PA">Panama</option>
+        <option value="PG">Papua New Guinea</option>
+        <option value="PY">Paraguay</option>
+        <option value="PE">Peru</option>
+        <option value="PH">Philippines</option>
+        <option value="PN">Pitcairn</option>
+        <option value="PL">Poland</option>
+        <option value="PT">Portugal</option>
+        <option value="PR">Puerto Rico</option>
+        <option value="QA">Qatar</option>
+        <option value="RE">Réunion</option>
+        <option value="RO">Romania</option>
+        <option value="RU">Russian Federation</option>
+        <option value="RW">Rwanda</option>
+        <option value="BL">Saint Barthélemy</option>
+        <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+        <option value="KN">Saint Kitts and Nevis</option>
+        <option value="LC">Saint Lucia</option>
+        <option value="MF">Saint Martin (French part)</option>
+        <option value="PM">Saint Pierre and Miquelon</option>
+        <option value="VC">Saint Vincent and the Grenadines</option>
+        <option value="WS">Samoa</option>
+        <option value="SM">San Marino</option>
+        <option value="ST">Sao Tome and Principe</option>
+        <option value="SA">Saudi Arabia</option>
+        <option value="SN">Senegal</option>
+        <option value="RS">Serbia</option>
+        <option value="SC">Seychelles</option>
+        <option value="SL">Sierra Leone</option>
+        <option value="SG">Singapore</option>
+        <option value="SX">Sint Maarten (Dutch part)</option>
+        <option value="SK">Slovakia</option>
+        <option value="SI">Slovenia</option>
+        <option value="SB">Solomon Islands</option>
+        <option value="SO">Somalia</option>
+        <option value="ZA">South Africa</option>
+        <option value="GS">South Georgia and the South Sandwich Islands</option>
+        <option value="SS">South Sudan</option>
+        <option value="ES">Spain</option>
+        <option value="LK">Sri Lanka</option>
+        <option value="SD">Sudan</option>
+        <option value="SR">Suriname</option>
+        <option value="SJ">Svalbard and Jan Mayen</option>
+        <option value="SZ">Swaziland</option>
+        <option value="SE">Sweden</option>
+        <option value="CH">Switzerland</option>
+        <option value="SY">Syrian Arab Republic</option>
+        <option value="TW">Taiwan, Province of China</option>
+        <option value="TJ">Tajikistan</option>
+        <option value="TZ">Tanzania, United Republic of</option>
+        <option value="TH">Thailand</option>
+        <option value="TL">Timor-Leste</option>
+        <option value="TG">Togo</option>
+        <option value="TK">Tokelau</option>
+        <option value="TO">Tonga</option>
+        <option value="TT">Trinidad and Tobago</option>
+        <option value="TN">Tunisia</option>
+        <option value="TR">Turkey</option>
+        <option value="TM">Turkmenistan</option>
+        <option value="TC">Turks and Caicos Islands</option>
+        <option value="TV">Tuvalu</option>
+        <option value="UG">Uganda</option>
+        <option value="UA">Ukraine</option>
+        <option value="AE">United Arab Emirates</option>
+        <option value="GB">United Kingdom</option>
+        <option value="US">United States</option>
+        <option value="UM">United States Minor Outlying Islands</option>
+        <option value="UY">Uruguay</option>
+        <option value="UZ">Uzbekistan</option>
+        <option value="VU">Vanuatu</option>
+        <option value="VE">Venezuela, Bolivarian Republic of</option>
+        <option value="VN">Viet Nam</option>
+        <option value="VG">Virgin Islands, British</option>
+        <option value="VI">Virgin Islands, U.S.</option>
+        <option value="WF">Wallis and Futuna</option>
+        <option value="EH">Western Sahara</option>
+        <option value="YE">Yemen</option>
+        <option value="ZM">Zambia</option>
+        <option value="ZW">Zimbabwe</option>
+        </select>
+        </form>
+
+    </div>
+
+
+    <!-- 5 -->
+    <label for="CityInput" class="my-2" >   City Name :</label>
+    <input type="text" class="form-control my-2"  id="CityInput" required  oninput="validateCity()">
+    <p class="alert alert-danger rounded-2 d-none CityAlert">You Should Enter Your City Name without Numbers</p>
+
+
+    <!-- 6 -->
+    <label for="NeighborhoodInput" class="my-2" >  Neighborhood name :</label>
+    <input type="text" class="form-control my-2"  id="NeighborhoodInput" required oninput="validateNeighborhood()">
+    <p class="alert alert-danger rounded-2 d-none NeighborhoodAlert">You Should Enter Your Neighborhood Name without Numbers</p>
+
+
+    <!-- 7 -->
+    <label for="POBoxInput" class="my-2" >  PO Box Number :</label>
+    <input type="text" class="form-control my-2"  id="POBoxInput" required oninput="validatePOBox()">
+    <p class="alert alert-danger rounded-2 d-none POBoxAlert">You Should Enter Your PO Box Number (five numbers)</p>   
+
+
+    <!-- 8 -->
+    <label for="description4" class="mb-2" >Enter Description Of The  Address : </label>
+    <textarea  id="description4" cols="30" rows="5" required oninput="getdescription4()"></textarea>    
+    <p class="alert alert-danger rounded-2 d-none description4Alert">You Should Enter Description</p>   
+
+
+
+    <div class="d-flex justify-content-between align-items-center my-5 flex-wrap gap-4 ContOfFooterButtons justify-content-center">
+        <button class="btns backToLevel3">
+            Previous Step (3)
+         </button>
+    
+         <div class="d-flex rightBtn ">
+            <button class="cta submitLevel4">
+                <span class="span">Submit All Steps</span>
+                <span class="second">
+                  <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                      <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                      <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                    </g>
+                  </svg>
+                </span> 
+            </button>
+        </div>
+        
+    </div>
+
+    <p class="alert alert-danger rounded-2 d-none level4Alert">You Must Enter Correct Information</p>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Button trigger modal -->
+ <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModals">
+    Launch demo modal
+  </button>   -->
+  
+  <!-- Modal  of all data-->
+  <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5  position-relative start-50 translate-middle-x " id="exampleModalLabel">My Application</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <!-- level 1 values -->
+          <div class="level1Vals">
+
+            <div class="d-flex justify-content-between my-2 flex-wrap gap-3">
+                    <span class="First_p">Modal Type <span class="distance1">:</span> <input type="text"  id="appModelTypeLevel1" disabled class="bg-gray" value="Company"></span>
+
+                    <span class="First_p">Car maker <span class="distance2">:</span> <input type="text"  id="CarMakerLevel1" disabled class="bg-gray" value="SKODA"></span>
+
+            </div>
+
+            <div class="d-flex justify-content-between my-2 flex-wrap gap-3 mt-3">
+                <span class="First_p">Car modal <span class="distance3">:</span> <input type="text"  id="CarModalLevel1" disabled class="bg-gray" value="SLS8500"></span>
+
+                <span class="First_p">Made Year <span class="distance4">:</span> <input type="text"  id="madeYearLevel1" disabled class="bg-gray" value="2000"></span>
+            </div>
+
+          </div>
+          <hr class="border-5">
+
+
+          <h4 class="my-3 text-center allOrders">All Orders</h4>
+
+          <!-- level 2 values -->
+          <div class="level2Vals">
+            
+            <div class="row  justify-content-center level2container g-4">
+
+                <!-- <div class="col-lg-6 p-5 text-center">
+
+                    <p>Image Of Spare Part</p>
+                    <img src="imgs/noImage.jpg" class="appImgLevel2 w-100" alt="Spare partImage">
+        
+                </div> -->
+
+
+
+
+
+                
+
+
+                <div class="col-xl-6 ">
+
+
+                    <div class="reqsInApp">
+
+
+                    <h4 class="text-center mb-3 text-danger">Order( num )</h5>
+                    <span class="d-block d-flex"> 
+            
+                        <p class="First_p">spare part Name <span class="distance5">:</span></p>
+                        <p  class="second_p"  id="sparePartNameApplevel2">SHAKMAN</p>
+                        
+                        </span>
+            
+                        <!-- 2 -->
+                        <span class="d-block d-flex"> 
+                        
+                            <p class="First_p">Number Of Pieces <span class="distance6">:</span></p>
+                            <p  class="second_p"  id="piecesNumAppLevel2">20</p>
+                            
+                        </span>
+            
+                        <!-- 3 -->
+                        <span class="d-block d-flex"> 
+                        
+                            <p class="First_p">Parts serial Number <span class="distance7">:</span></p>
+                            <p  class="second_p"  id="serialNumAppLevel2">Not specified</p>
+                            
+                        </span> 
+                        
+                        <!-- 4 -->
+                        <span class="d-block d-flex"> 
+                        
+                            <p class="First_p">Vehicle Chassis Number <span class="distance8">:</span></p>
+                            <p  class="second_p"  id="chassisNumAppLevel2">Not specified</p>
+                            
+                        </span>  
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+        </div>
+
+          </div>
+
+          <hr class="border-5">
+
+
+          <!-- level 3 values -->
+          <div class="level2Vals">
+            
+            <div class="row  justify-content-center">
+
+                <div class="col-lg-6 p-5 text-center">
+
+                    <img src="imgs/personal.webp" class="appImgLevel3 w-100" alt="Spare partImage">
+        
+                </div>
+
+            <div class="col-lg-6  d-flex flex-column gap-3 justify-content-center">
+
+             <!-- 1 -->
+            <span class="d-block d-flex"> 
+            
+            <p class="First_p">My Name <span class="distance10">:</span></p>
+            <p class="second_p"  id="appPersonName">ALaa shamms</p>
+            
+            </span>
+
+            <!-- 2 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p">My Email <span class="distance11">:</span></p>
+                <p class="second_p"  id="appPersonEmail">alaa@gmail.com</p>
+                
+            </span>
+
+            <!-- 3 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p">My Password <span class="distance12">:</span></p>
+                <p class="second_p"  id="appPersonPassword">123</p>
+                
+            </span> 
+            
+            <!-- 4 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p"> My phone <span class="distance13">:</span></p>
+                <p class="second_p"  id="appPersonPhone">01028978688</p>
+                
+            </span>   
+            
+
+
+
+
+           
+        </div>
+
+
+
+
+
+
+
+        </div>
+
+          </div>          
+
+          <hr class="border-5">
+
+
+          <!-- level 4 values -->
+          <div class="level2Vals">
+            
+            <div class="row  justify-content-center">
+
+                <div class="col-lg-6 p-5 text-center">
+
+                    <img src="imgs/customers.png" class="appImgLevel3 w-100" alt="Spare partImage">
+        
+                </div>
+
+            <div class="col-lg-6  d-flex flex-column gap-3 justify-content-center">
+
+             <!-- 1 -->
+            <span class="d-block d-flex"> 
+            
+            <p class="First_p">Shipping type <span class="distance10">:</span></p>
+            <p class="second_p"  id="ShippingTypeAppLevel4">for myself</p>
+            
+            </span>
+
+            <!-- 2 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p">Full Name In Arabic <span class="distance11">:</span></p>
+                <p class="second_p"  id="fNameArabicAppLevel4">علاء شمس</p>
+                
+            </span>
+
+            <!-- 3 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p">Full Name In English <span class="distance12">:</span></p>
+                <p class="second_p"  id="fNameEnglishAppLevel4">alaa shamms</p>
+                
+            </span> 
+            
+            <!-- 4 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p"> My Country <span class="distance13">:</span></p>
+                <p class="second_p"  id="CountryAppLevel4">cairo</p>
+                
+            </span>   
+
+            <!-- 5 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p"> City Name <span class="distance13">:</span></p>
+                <p class="second_p"  id="CityAppLevel4">aghour</p>
+                
+            </span>  
+
+            <!-- 6 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p">Neighborhood name <span class="distance13">:</span></p>
+                <p class="second_p"  id="NeighborhoodAppLevel4">sameh ahmed street</p>
+                
+            </span>   
+                        
+            <!-- 7 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p"> PO Box Number <span class="distance13">:</span></p>
+                <p class="second_p"  id="BoxAppLevel4">11254</p>
+                
+            </span>
+
+            <!-- 8 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p">  Description Of The  Address <span class="distance13">:</span></p>
+                <p class="second_p"  id="DescriptionAppLevel4">near to hamzaa street</p>
+                
+            </span>   
+            
+            <!-- 9 -->
+            <span class="d-block d-flex"> 
+            
+                <p class="First_p"> My phone <span class="distance13">:</span></p>
+                <p class="second_p"  id="phoneAppLevel4">01028978688</p>
+                
+            </span>   
+
+
+
+
+
+           
+        </div>
+
+
+
+
+
+
+
+        </div>
+
+          </div>     
+
+
+        </div>
+
+
+
+
+
+
+        <div class="modal-footer d-flex justify-content-evenly">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Update Application</button>
+          <button type="button" class="btn btn-primary" id="submitApp">submit Application</button>
+          <button type="button" class="btn btn-danger closeApplication" data-bs-dismiss="modal">Close Application</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- final level -->
+  <div class="finalLevel d-flex justify-content-center align-items-center d-none">
+
+    <div class="successForm position-relative">
+        
+        <div class="loader"></div>
+
+        <p class="text-center mt-4">Your Application Has Been Submited</p>
+
+        <p class="text-center">You Should Know that Your Application  has been received and is being reviewed</p>
+        
+        <p class="text-warning text-center">Application number and status <span class="d-block">(under review)</span></p>
+
+    </div>
+
+  </div>
+
+
+
+  
+
+
+   
+    <!-- link of jquery js -->
+    <script src="Js/jquery-3.7.1.min.js"></script>
+    <!-- link of bootstrap js -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- link of main js -->
+    <script src="Js/main.js"></script>
+
+</body>
+</html>
